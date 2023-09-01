@@ -15,7 +15,7 @@ export type ArticleProps = {
 };
 
 function BodySection() {
-  const [responseData, SetResponseData] = useState<null | ArticleProps[]>(null);
+  const [responseData, SetResponseData] = useState<ArticleProps[] | null>(null);
   const [isLoading, SetIsLoading] = useState(true);
   const [isError, SetIsError] = useState(false);
 
@@ -23,7 +23,7 @@ function BodySection() {
     instance
       .get("&sortBy=popularity")
       .then((response) => {
-        SetResponseData(response.data['articles']);
+        SetResponseData(response.data["articles"]);
         SetIsLoading(false);
       })
       .catch((error) => {
@@ -32,9 +32,13 @@ function BodySection() {
       });
   }, []);
 
-  return (
+  return isLoading ? (
+    <div className="max-h-screen flex items-center">Loading Content...</div>
+  ) : isError ? (
+    <div className="max-h-screen flex items-center">oops, Someting off...</div>
+  ) : (
     <Routes>
-      <Route path="/" element={<HomeScreen responseData={responseData} />} />
+      <Route path="/" element={<HomeScreen responseData={responseData!} />} />
     </Routes>
   );
 }
