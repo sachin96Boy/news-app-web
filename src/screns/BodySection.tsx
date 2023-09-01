@@ -21,7 +21,9 @@ function BodySection() {
 
   useEffect(() => {
     instance
-      .get("&sortBy=popularity")
+      .get(
+        "everything?domains=techcrunch.com,thenextweb.com,bbc.co.uk&sortBy=popularity"
+      )
       .then((response) => {
         SetResponseData(response.data["articles"]);
         SetIsLoading(false);

@@ -18,9 +18,9 @@ function HeroSection(props: HeroProps) {
   return (
     <div className="flex items-center justify-between">
       <div className="image-banner">
-        <img src={imgUrl} alt={title} className="object-cover w-5/12" />
+        <img src={imgUrl} alt={title} className="object-cover" />
       </div>
-      <div className="item-container items-start">
+      <div className="item-container items-start ml-5">
         <div className="flex justify-between items-center">
           <div className="text-red-600 font-poppins font-semibold">
             Tranding

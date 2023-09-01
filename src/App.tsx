@@ -5,7 +5,7 @@ import BodySection from "./screns/BodySection";
 
 function App() {
   return (
-    <div className="bg-slate-200">
+    <div className="bg-slate-200 overflow-hidden">
       <Navbar />
       <BrowserRouter>
         <BodySection />

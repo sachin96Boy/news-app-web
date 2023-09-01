@@ -9,9 +9,13 @@ function NewsCard(props: HeroProps) {
   const timePosted = moment(new Date(time).toISOString()).fromNow();
 
   return (
-    <div className="flex flex-col items-center justify-between bg-white">
+    <div className="flex flex-col items-center justify-between bg-white min-h-full">
       <div className="image-banner">
-        <img src={imgUrl} alt={title} className="object-cover w-10 h-5" />
+        <img
+          src={imgUrl}
+          alt={title}
+          className="object-fill w-screen h-40"
+        />
       </div>
       <div className="text-content m-2">
         <div className="font-ibm-plex-serif font-semibold text-3xl my-2">
@@ -24,7 +28,7 @@ function NewsCard(props: HeroProps) {
         </div>
       </div>
       <div className="divide-y-2 drop-shadow-lg"></div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center  gap-2 my-2">
         <IconContext.Provider value={{ size: "14" }}>
           <AiOutlineHeart />
         </IconContext.Provider>

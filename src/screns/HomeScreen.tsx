@@ -4,13 +4,13 @@ import BreakingHotSection from "../components/bodysection/body-upper/BreakingHot
 import NewsGrid from "../components/bodysection/newsgrid/NewsGrid";
 
 type homeScreenProps = {
-    responseData: ArticleProps[];
-}
+  responseData: ArticleProps[];
+};
 
 function HomeScreen(props: homeScreenProps) {
-    const {responseData} = props;
+  const { responseData } = props;
   return (
-    <div className="mx-20 gap-4">
+    <div className="mx-20 gap-2 my-2 flex flex-col">
       <HeroSection
         author={responseData[0].author}
         description={responseData[0].description}
