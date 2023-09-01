@@ -4,14 +4,19 @@ import NewsCard from "../../newsCard/NewsCard";
 
 const listTitles = ["Latest Stories", "Think", "Health"];
 
-function NewsGrid(props: ArticleProps[]) {
+type newsGridProps = {
+  newsData: ArticleProps[];
+};
+
+function NewsGrid(props: newsGridProps) {
+  const { newsData } = props;
   const [showMore, SetShowMore] = useState(false);
 
   const handleClick = () => {
     SetShowMore(!showMore);
   };
 
-  const data = showMore ? props : props.slice(0, 4);
+  const data = showMore ? newsData : newsData.slice(0, 4);
   return (
     <div className="flex flex-col items-center justify-between">
       <div className="flex items-center justify-between bg-white h-12">

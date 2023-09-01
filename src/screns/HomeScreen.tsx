@@ -1,18 +1,27 @@
 import { ArticleProps } from "./BodySection";
 import HeroSection from "../components/bodysection/hero/HeroSection";
 import BreakingHotSection from "../components/bodysection/body-upper/BreakingHotSection";
+import NewsGrid from "../components/bodysection/newsgrid/NewsGrid";
 
-function HomeScreen(props: ArticleProps[]) {
+type homeScreenProps = {
+    responseData: ArticleProps[];
+}
+
+function HomeScreen(props: homeScreenProps) {
+    const {responseData} = props;
   return (
     <div className="mx-20 gap-4">
       <HeroSection
-        author={props[0].author}
-        description={props[0].description}
-        imgUrl={props[0].urlToImage}
-        time={props[0].publishedAt}
-        title={props[0].title}
+        author={responseData[0].author}
+        description={responseData[0].description}
+        imgUrl={responseData[0].urlToImage}
+        time={responseData[0].publishedAt}
+        title={responseData[0].title}
       />
-      <BreakingHotSection title={props[1].title} />
+      <BreakingHotSection title={responseData[1].title} />
+      <div className="flex items-center justify-between">
+        <NewsGrid newsData={responseData} />
+      </div>
     </div>
   );
 }
