@@ -55,7 +55,7 @@ function NewsGrid(props: newsGridProps) {
         </div>
       </div>
       <div
-        className="border-red-400 border-2 text-red-800 font-poppins font-medium p-4 cursor-pointer"
+        className="border-red-400 border-2 my-2 text-red-800 font-poppins font-medium px-8 py-2 cursor-pointer"
         onClick={handleClick}
       >
         VIEW MORE
