@@ -29,12 +29,20 @@ function Navbar() {
             <li
               key={index}
               className={
-                index == 0 ? "flex items-center" : "flex items-center gap-4"
+                index == 0
+                  ? "flex items-center gap-0"
+                  : "flex items-center gap-6"
               }
             >
               <div>
                 {index == 0 ? (
-                  <IconContext.Provider value={{ color: "red", size: "28" }}>
+                  <IconContext.Provider
+                    value={{
+                      color: "red",
+                      size: "28",
+                      className: "-m-1",
+                    }}
+                  >
                     <BsDot />
                   </IconContext.Provider>
                 ) : null}
@@ -45,18 +53,20 @@ function Navbar() {
         </ul>
       </div>
       <div className="more-section">
-        <RiArrowRightDoubleFill />
+        <IconContext.Provider value={{ size: "20" }}>
+          <RiArrowRightDoubleFill />
+        </IconContext.Provider>
       </div>
       <div className="user-section items-center justify-between flex gap-4">
-        <div>
+        <IconContext.Provider value={{ size: "22" }}>
           <AiOutlineUser />
-        </div>
-        <div>
+        </IconContext.Provider>
+        <IconContext.Provider value={{ size: "22" }}>
           <BsSearch />
-        </div>
-        <div>
+        </IconContext.Provider>
+        <IconContext.Provider value={{ size: "22" }}>
           <BiMenuAltRight />
-        </div>
+        </IconContext.Provider>
       </div>
     </div>
   );
