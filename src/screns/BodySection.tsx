@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import HomeScreen from "./HomeScreen";
 import instance from "../utils/AxiosInstance";
 
-type ArticleProps = {
+export type ArticleProps = {
   source: object;
   author: string;
   title: string;

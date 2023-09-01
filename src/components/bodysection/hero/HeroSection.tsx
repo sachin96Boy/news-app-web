@@ -1,8 +1,9 @@
+import moment from "moment";
 import { IconContext } from "react-icons";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsBoxArrowUp, BsBookmark } from "react-icons/bs";
 
-type HeroProps = {
+export type HeroProps = {
   title: string;
   description: string;
   author: string;
@@ -12,8 +13,10 @@ type HeroProps = {
 
 function HeroSection(props: HeroProps) {
   const { title, description, author, time, imgUrl } = props;
+  const timePosted = moment(new Date(time).toISOString()).fromNow();
+
   return (
-    <div className="flex items-center justify-between mx-20">
+    <div className="flex items-center justify-between">
       <div className="image-banner">
         <img src={imgUrl} alt={title} className="object-cover w-5/12" />
       </div>
@@ -39,7 +42,7 @@ function HeroSection(props: HeroProps) {
         </div>
         <div className="font-poppins my-2">{description}</div>
         <div className="flex items-start">
-          <div className="time font-poppins mr-3">{time}</div>
+          <div className="time font-poppins mr-3">{timePosted}</div>
           <div className="time font-poppins mx-1">By {author}</div>
         </div>
       </div>
