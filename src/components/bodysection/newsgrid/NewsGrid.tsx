@@ -23,25 +23,20 @@ function NewsGrid(props: newsGridProps) {
   return (
     <div className="flex flex-col items-center justify-between">
       <div className="flex flex-col items-start justify-between my-2">
-        <div className="flex items-center justify-between my-2 bg-white h-12">
-          <ul className=" flex items-center gap-2 font-poppins font-semibold list-none">
+        <div className="flex items-center justify-between my-2 bg-white h-12 w-full p-2">
+          <ul className=" flex items-center gap-8 font-poppins font-semibold list-none">
             {listTitles.map((item, index) => (
-              <li
-                key={index}
-                className={index == 0 ? "flex flex-col items-start" : undefined}
-              >
+              <li key={index}>
                 {item}
                 <div
                   className={
-                    index == 0
-                      ? "divide-solid divide-y-2 border-red-800"
-                      : undefined
+                    index == 0 ? "border-b-red-700 border-b-4 mr-14" : undefined
                   }
-                ></div>
+                />
               </li>
             ))}
           </ul>
-          <IconContext.Provider value={{ size: "14" }}>
+          <IconContext.Provider value={{ size: "28" }}>
             <HiOutlineBookmark />
           </IconContext.Provider>
         </div>

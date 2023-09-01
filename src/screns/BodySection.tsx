@@ -35,9 +35,9 @@ function BodySection() {
   }, []);
 
   return isLoading ? (
-    <div className="max-h-screen flex items-center">Loading Content...</div>
+    <div className="min-h-screen flex items-center justify-between">Loading Content...</div>
   ) : isError ? (
-    <div className="max-h-screen flex items-center">oops, Someting off...</div>
+    <div className="min-h-screen flex items-center justify-between">oops, Someting off...</div>
   ) : (
     <Routes>
       <Route path="/" element={<HomeScreen responseData={responseData!} />} />
