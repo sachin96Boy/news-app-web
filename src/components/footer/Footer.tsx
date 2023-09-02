@@ -25,16 +25,16 @@ function Footer() {
           ))}
         </ul>
         <div className="flex items-center gap-6">
-          <IconContext.Provider value={{ color: "white" }}>
+          <IconContext.Provider value={{ color: "white", size: "24" }}>
             <MdRssFeed />
           </IconContext.Provider>
-          <IconContext.Provider value={{ color: "white" }}>
+          <IconContext.Provider value={{ color: "white", size: "24" }}>
             <FaTwitter />
           </IconContext.Provider>
-          <IconContext.Provider value={{ color: "white" }}>
+          <IconContext.Provider value={{ color: "white", size: "24" }}>
             <FaRedditAlien />
           </IconContext.Provider>
-          <IconContext.Provider value={{ color: "white" }}>
+          <IconContext.Provider value={{ color: "white", size: "24" }}>
             <BsFacebook />
           </IconContext.Provider>
         </div>

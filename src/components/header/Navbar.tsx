@@ -30,8 +30,8 @@ function Navbar() {
               key={index}
               className={
                 index == 0
-                  ? "flex items-center gap-0"
-                  : "flex items-center gap-6"
+                  ? "flex items-center gap-0 cursor-pointer"
+                  : "flex items-center gap-6 cursor-pointer"
               }
             >
               <div>
@@ -52,19 +52,25 @@ function Navbar() {
           ))}
         </ul>
       </div>
-      <div className="more-section">
+      <div className="more-section cursor-pointer">
         <IconContext.Provider value={{ size: "20" }}>
           <RiArrowRightDoubleFill />
         </IconContext.Provider>
       </div>
       <div className="user-section items-center justify-between flex gap-4">
-        <IconContext.Provider value={{ size: "22" }}>
+        <IconContext.Provider
+          value={{ size: "22", className: "cursor-pointer" }}
+        >
           <AiOutlineUser />
         </IconContext.Provider>
-        <IconContext.Provider value={{ size: "22" }}>
+        <IconContext.Provider
+          value={{ size: "22", className: "cursor-pointer" }}
+        >
           <BsSearch />
         </IconContext.Provider>
-        <IconContext.Provider value={{ size: "22" }}>
+        <IconContext.Provider
+          value={{ size: "22", className: "cursor-pointer" }}
+        >
           <BiMenuAltRight />
         </IconContext.Provider>
       </div>

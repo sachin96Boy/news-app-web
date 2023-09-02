@@ -26,7 +26,7 @@ function NewsGrid(props: newsGridProps) {
         <div className="flex items-center justify-between my-2 bg-white h-12 w-full p-2">
           <ul className=" flex items-center gap-8 font-poppins font-semibold list-none">
             {listTitles.map((item, index) => (
-              <li key={index}>
+              <li key={index} className="cursor-pointer">
                 {item}
                 <div
                   className={

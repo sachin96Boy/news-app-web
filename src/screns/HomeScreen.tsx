@@ -11,7 +11,7 @@ type homeScreenProps = {
 function HomeScreen(props: homeScreenProps) {
   const { responseData } = props;
   return (
-    <div className="mx-20 gap-2 my-2 flex flex-col">
+    <div className="mx-20 gap-2 min-h-screen my-2 flex flex-col">
       <HeroSection
         author={responseData[0].author}
         description={responseData[0].description}

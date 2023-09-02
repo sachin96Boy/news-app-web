@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/header/Navbar";
 import BodySection from "./screns/BodySection";
+import DevFooter from "./components/footer/DevFooter";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <BodySection />
       </BrowserRouter>
       <Footer />
+      <DevFooter />
     </div>
   );
 }
