@@ -9,25 +9,21 @@ function NewsCard(props: HeroProps) {
   const timePosted = moment(new Date(time).toISOString()).fromNow();
 
   return (
-    <div className="flex flex-col items-center justify-between bg-white min-h-full">
+    <div className="flex flex-col overflow-hidden items-center justify-between  bg-white min-h-full drop-shadow-lg">
       <div className="image-banner">
-        <img
-          src={imgUrl}
-          alt={title}
-          className="object-fill w-screen h-40"
-        />
+        <img src={imgUrl} alt={title} className="object-fill w-screen h-40" />
       </div>
-      <div className="text-content m-2">
-        <div className="font-ibm-plex-serif font-semibold text-3xl my-2">
+      <div className="text-content">
+        <div className="font-ibm-plex-serif font-semibold text-xl mx-4">
           {title}
         </div>
-        <div className="font-poppins my-2">{description}</div>
-        <div className="flex items-start">
-          <div className="time font-poppins mr-3">{timePosted}</div>
-          <div className="time font-poppins mx-1">By {author}</div>
+        <div className="font-poppins my-2 mx-4">{description}</div>
+        <div className="flex items-start justify-between mx-4 gap-2">
+          <div className="time font-poppins text-xs">{timePosted}</div>
+          <div className="time font-poppins text-xs ">By {author}</div>
         </div>
       </div>
-      <div className="border-b-gray-200 border-b-4 w-full drop-shadow-lg" />
+      <div className="border-b-gray-200 border-b-2 w-full drop-shadow-sm" />
       <div className="flex items-center w-full justify-evenly my-4">
         <IconContext.Provider value={{ size: "14" }}>
           <AiOutlineHeart />

@@ -2,6 +2,7 @@ import { ArticleProps } from "./BodySection";
 import HeroSection from "../components/bodysection/hero/HeroSection";
 import BreakingHotSection from "../components/bodysection/body-upper/BreakingHotSection";
 import NewsGrid from "../components/bodysection/newsgrid/NewsGrid";
+import LiveSection from "../components/bodysection/body-upper/LiveSection";
 
 type homeScreenProps = {
   responseData: ArticleProps[];
@@ -19,8 +20,12 @@ function HomeScreen(props: homeScreenProps) {
         title={responseData[0].title}
       />
       <BreakingHotSection title={responseData[1].title} />
-      <div className="flex items-center justify-between">
+      <div className="flex justify-between gap-6">
         <NewsGrid newsData={responseData} />
+        <LiveSection
+          title={responseData[4].title}
+          imgUrl={responseData[4].urlToImage}
+        />
       </div>
     </div>
   );
