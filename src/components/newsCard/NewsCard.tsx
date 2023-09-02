@@ -23,8 +23,8 @@ function NewsCard(props: HeroProps) {
           <div className="time font-poppins text-xs ">By {author}</div>
         </div>
       </div>
-      <div className="border-b-gray-200 border-b-2 w-full drop-shadow-sm" />
-      <div className="flex items-center w-full justify-evenly my-4">
+      <div className="border-b-gray-200 border-b-2 w-full drop-shadow-sm my-2" />
+      <div className="flex items-center w-full justify-evenly mb-2">
         <IconContext.Provider value={{ size: "14" }}>
           <AiOutlineHeart />
         </IconContext.Provider>
