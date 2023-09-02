@@ -19,7 +19,7 @@ function Navbar() {
     "Fashion",
   ];
   return (
-    <div className="flex items-center justify-evenly sticky w-screen h-20 bg-white z-50">
+    <div className="flex items-center justify-evenly sticky  h-20 top-0 bg-white z-50 drop-shadow-md">
       <div className="logo-container">
         <Logo />
       </div>

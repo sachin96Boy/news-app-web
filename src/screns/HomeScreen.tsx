@@ -3,6 +3,7 @@ import HeroSection from "../components/bodysection/hero/HeroSection";
 import BreakingHotSection from "../components/bodysection/body-upper/BreakingHotSection";
 import NewsGrid from "../components/bodysection/newsgrid/NewsGrid";
 import LiveSection from "../components/bodysection/body-upper/LiveSection";
+import EditorSection from "../components/bodysection/editor-section/EditorSection";
 
 type homeScreenProps = {
   responseData: ArticleProps[];
@@ -27,6 +28,7 @@ function HomeScreen(props: homeScreenProps) {
           imgUrl={responseData[4].urlToImage}
         />
       </div>
+      <EditorSection articleList={responseData} />
     </div>
   );
 }

@@ -6,14 +6,16 @@ import DevFooter from "./components/footer/DevFooter";
 
 function App() {
   return (
-    <div className="bg-slate-200 overflow-hidden">
+    <>
       <Navbar />
-      <BrowserRouter>
-        <BodySection />
-      </BrowserRouter>
+      <div className="bg-slate-200 overflow-hidden">
+        <BrowserRouter>
+          <BodySection />
+        </BrowserRouter>
+      </div>
       <Footer />
       <DevFooter />
-    </div>
+    </>
   );
 }
 
