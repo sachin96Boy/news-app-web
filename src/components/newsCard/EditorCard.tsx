@@ -13,7 +13,7 @@ function EditorCard(props: EditorProps) {
   return (
     <div className="flex items-center gap-2">
       <div className="relative">
-        <img src={imgUrl} alt={title} className="object-cover" />
+        <img src={imgUrl} alt={title} className="object-cover w-screen h-52" />
         <div className="flex items-center text-white font-bold justify-center gap-4 backdrop-blur-sm p-2 absolute bottom-0 right-0 left-0">
           <IconContext.Provider value={{ size: "20" }}>
             <AiOutlineHeart />

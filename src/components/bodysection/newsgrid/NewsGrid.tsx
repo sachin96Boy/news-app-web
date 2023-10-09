@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { ArticleProps } from "../../../screns/BodySection";
 import NewsCard from "../../newsCard/NewsCard";
 
 import { HiOutlineBookmark } from "react-icons/hi";
 import { IconContext } from "react-icons";
+import { NewsModel } from "../../../models/NewsModel";
 
 const listTitles = ["Latest Stories", "Think", "Health"];
 
 type newsGridProps = {
-  newsData: ArticleProps[];
+  newsData: NewsModel[];
 };
 
 function NewsGrid(props: newsGridProps) {
@@ -44,11 +44,11 @@ function NewsGrid(props: newsGridProps) {
           {data.map((article, index) => (
             <div key={index}>
               <NewsCard
-                author={article.author}
-                description={article.description}
-                imgUrl={article.urlToImage}
-                time={article.publishedAt}
-                title={article.title}
+                author={article.getProvider}
+                description={article.getDescription}
+                imgUrl={article.getImg}
+                time={article.getDatePublished}
+                title={article.getTitle}
               />
             </div>
           ))}

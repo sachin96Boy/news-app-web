@@ -11,7 +11,7 @@ function NewsCard(props: HeroProps) {
   return (
     <div className="flex flex-col overflow-hidden items-center justify-between  bg-white min-h-full drop-shadow-lg">
       <div className="image-banner">
-        <img src={imgUrl} alt={title} className="object-fill w-screen h-40" />
+        <img src={imgUrl} alt={title} className="object-cover w-screen h-40" />
       </div>
       <div className="text-content">
         <div className="font-ibm-plex-serif font-semibold text-xl mx-4">

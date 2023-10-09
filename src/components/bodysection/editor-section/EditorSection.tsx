@@ -1,11 +1,10 @@
 import { IconContext } from "react-icons";
-import { ArticleProps } from "../../../screns/BodySection";
-
 import { AiFillStar } from "react-icons/ai";
 import EditorCard from "../../newsCard/EditorCard";
+import { NewsModel } from "../../../models/NewsModel";
 
 type EditorProps = {
-  articleList: ArticleProps[];
+  articleList: NewsModel[];
 };
 
 function EditorSection(props: EditorProps) {
@@ -22,9 +21,9 @@ function EditorSection(props: EditorProps) {
         {articleList.slice(1, 3).map((item, index) => (
           <li key={index}>
             <EditorCard
-              title={item.title}
-              description={item.description}
-              imgUrl={item.urlToImage}
+              title={item.getTitle}
+              description={item.getDescription}
+              imgUrl={item.getImg}
             />
           </li>
         ))}
