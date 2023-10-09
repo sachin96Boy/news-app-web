@@ -1,8 +1,8 @@
-import { ArticleProps } from "../../screns/BodySection";
+import { NewsModel } from "../../models/NewsModel";
 import EditorCard from "../newsCard/EditorCard";
 
 type carouslProps = {
-  newsItems: ArticleProps[];
+  newsItems: NewsModel[];
 };
 
 function Carousl(props: carouslProps) {
@@ -19,14 +19,14 @@ function Carousl(props: carouslProps) {
           return (
             <div
               key={index}
-            //   className="hidden duration-700 ease-in-out"
+              //   className="hidden duration-700 ease-in-out"
               data-carousel-item
             >
               <div className="block w-full">
                 <EditorCard
-                  description={item.description}
-                  imgUrl={item.urlToImage}
-                  title={item.title}
+                  description={item.getDescription}
+                  imgUrl={item.getImg}
+                  title={item.getTitle}
                 />
               </div>
             </div>
